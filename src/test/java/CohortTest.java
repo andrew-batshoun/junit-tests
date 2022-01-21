@@ -42,6 +42,10 @@ public class CohortTest {
     public void averageGrade(){
         Assert.assertEquals(93.5, cohortWithMany.getCohortAverage(),0);
     }
+    @Test
+    public void nameById(){
+        Assert.assertEquals("Morgan", cohortWithMany.findStudentById(2));
+    }
 
 
 }
