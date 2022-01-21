@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Cohort {
@@ -11,17 +12,20 @@ public class Cohort {
 
     public double getCohortAverage() {
         double avg = 0;
-        for (Student student: this.getStudents()) {
+        for (Student student : this.getStudents()) {
             avg += student.getGradeAverage();
         }
         return avg / this.getStudents().size();
     }
 
-    public void addStudent(Student student){
+    public void addStudent(Student student) {
         students.add(student);
     }
 
     public List<Student> getStudents() {
         return students;
     }
+
+
+
 }
