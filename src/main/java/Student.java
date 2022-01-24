@@ -1,6 +1,8 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Student {
+    public Scanner scan = new Scanner(System.in);
     private String name;
     private long id;
     private ArrayList<Integer> grades;
@@ -23,6 +25,20 @@ public class Student {
 
     public ArrayList<Integer> getGrades() {
         return this.grades;
+    }
+
+    public Integer updateGrade(){
+        System.out.println("Which grade would you like to replace?");
+        int oldGrade = scan.nextInt();
+        System.out.println("What is the new grade?");
+        int newGrade = scan.nextInt();
+        return grades.set(oldGrade,newGrade);
+    }
+
+    public Integer deleteGrade(){
+        System.out.println("Which grade would you like to delete?");
+        int delGrade = scan.nextInt();
+        return grades.remove(delGrade);
     }
 
     public void addGrade(int grade) {
